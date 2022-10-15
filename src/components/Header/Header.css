@@ -1,0 +1,36 @@
+header {
+    height: 60px;
+    padding: 0 100px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+}
+
+.logo {
+    width: 3rem;
+}
+header h1 {
+    color: rgb(0, 0, 0);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 3%;
+    padding-right: 10%;
+}
+header nav  a{
+    margin-right: 10%;
+}
+header a {
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-style: inherit;
+    text-decoration: none;
+}

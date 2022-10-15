@@ -1,0 +1,37 @@
+.about {
+    margin: 15vh 25vw 10vh 25vw;
+    background: rgba(184, 128, 161, 0.15);
+    border-radius: 20px;
+    align-self: center;
+    display: flex;
+    padding: 3vh 4vw;
+    height: 45vh;
+    }
+    .puma-family {
+    margin: 3% 3% 2% -20%;
+    width: 25vw;
+    border-radius: 20px;
+    }
+    .about-article p {
+    width: 100%;
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #4B5D68;
+    margin-top: 3vh;
+    }
+    .about-article h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    align-items: center;
+    color: #212353;
+    margin-top: 12vh;
+    }
+    .buy-now {
+        width: 10rem;
+        height: 2rem;
+        font-family: 'Avenir';
+    }

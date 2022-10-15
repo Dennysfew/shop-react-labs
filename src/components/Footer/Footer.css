@@ -1,0 +1,21 @@
+footer {
+    padding-left: 100px;
+    padding-right: 40%;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-networks img{
+    margin-right: 20px;
+}
+.facebook {
+    width: 3rem;
+}
+.twitter {
+    width: 3rem;
+}
+.instagram {
+    width: 3rem;
+}
