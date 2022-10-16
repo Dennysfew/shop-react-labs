@@ -1,16 +1,23 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header.js';
-import Footer from './components/Footer/Footer.js';
-import Main from './components/Main/Main.js';
+import Home from './components/pages/Home.js'
+import Catalog from './components/pages/Catalog.js'
+import Cart from './components/pages/Cart.js'
+import Header from './components/Header/Header.js'
+import Footer from './components/Footer/Footer.js'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <Router>
     <Header />
-    <Main />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/catalog" element={<Catalog />} />
+      <Route path="/cart" element={<Cart />} />
+    </Routes>
     <Footer />
-  </>
+  </Router>
   );
 }
 

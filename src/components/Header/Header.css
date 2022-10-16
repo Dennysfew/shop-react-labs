@@ -1,14 +1,15 @@
 header {
     height: 60px;
     padding: 0 100px;
-    background-color: #ffffff;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 10px;
+    top: 0px;
     left: 0px;
     right: 0px;
+    z-index: 2;
 }
 
 .logo {
@@ -34,3 +35,15 @@ header a {
     font-style: inherit;
     text-decoration: none;
 }
+
+a:link, a:visited {
+    color: rgb(0, 0, 0);
+  }
+  
+  a.current:link, a.current:visited {
+    color: white;
+    background-color: rgb(107, 107, 116);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }

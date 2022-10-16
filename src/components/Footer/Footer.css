@@ -1,21 +1,12 @@
 footer {
-    padding-left: 100px;
-    padding-right: 40%;
-    height: 60px;
-    background-color: #ffffff;
+    height: 7vh;
+    background-color: #cccccd;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
-.footer-networks img{
-    margin-right: 20px;
-}
-.facebook {
+
+footer img {
     width: 3rem;
-}
-.twitter {
-    width: 3rem;
-}
-.instagram {
-    width: 3rem;
+    margin-right: 1.5vw;
 }

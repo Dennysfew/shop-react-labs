@@ -1,19 +1,18 @@
 import React from "react";
-import logo from "/Users/denys/shop-react-labs/src/components/images/logo.png"
-import '/Users/denys/shop-react-labs/src/components/Header/Header.css'
+import logo from "../images/logo.png"
+import '../Header/Header.css'
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
         <header>
             <img src={logo} className="logo" />
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Catalog</a>  
-                <a href="#">Cart</a>
-                <a href="#">Account</a>           
+                <Link to='/'> Home </Link>
+                <Link to='/catalog'> Catalog</Link>
+                <Link to='/'> Cart </Link>
+                <Link to='/'> Account</Link>
             </nav>
-
-            
         </header>
     )
 }

@@ -1,0 +1,7 @@
+.cards__items {
+    display: grid;
+    padding: 5vh 3vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3vw;
+    grid-row-gap: 3vh;
+}
