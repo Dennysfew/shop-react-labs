@@ -2,40 +2,57 @@ import React, { useEffect, useState } from 'react'
 import CardItem from './CardItem.js'
 import './Cards.css'
 import './Items.css'
-import Clothes from '../../models/Clothes.js'
+import axios from "axios";
+import Loader from "../../components/Loader/Loader.js";
 
 function Items() {
+
+
+  const [loading, setLoading] = useState(true)
+  const [clothers, setClothers] = useState([])
+
+  useEffect(() => {
+      axios.get('http://localhost:8080/api/clothes/get').then(res => {
+          setClothers(res.data)
+      })
+  }, [])
+  setTimeout(() => {
+    setLoading(false)
+}, 2000)
+
+
+
 
   const [filtered, setFiltered] = useState(Clothes)
   const [value, setValue] = useState('')
   useEffect(() => {
-    setFiltered(Clothes)
-  }, [Clothes])
+    setFiltered(clothers)
+  }, [clothers])
 
   function sexFilter(sex) {
     if (sex === 'Sex') {
-      setFiltered(Clothes)
+      setFiltered(clothers)
     } else {
-      let newClothes = [...Clothes].filter(item => item.sex === sex)
+      let newClothes = [...clothers].filter(item => item.sex === sex)
       setFiltered(newClothes)
     }
   }
   function colorFilter(color) {
     if (color === 'Color') {
-      setFiltered(Clothes)
+      setFiltered(clothers)
     } else {
-      let newClothes = [...Clothes].filter(item => item.color === color)
+      let newClothes = [...clothers].filter(item => item.color === color)
       setFiltered(newClothes)
     }
   }
   function priceFilter(price) {
     if (price === 'Price') {
-      setFiltered(Clothes)
+      setFiltered(clothers)
     } else if (price === '50$-100$') {
-      let newClothes = [...Clothes].filter(item => item.price > 50 && item.price < 100)
+      let newClothes = [...clothers].filter(item => item.price > 50 && item.price < 100)
       setFiltered(newClothes)
     } else {
-      let newClothes = [...Clothes].filter(item => item.price > 100 && item.price < 150)
+      let newClothes = [...clothers].filter(item => item.price > 100 && item.price < 150)
       setFiltered(newClothes)
     }
   }
@@ -59,7 +76,12 @@ function Items() {
   )
 
   return (
+    
     <>
+     {loading ?
+     <Loader/>
+     :
+     <div>
       <section className='filters_section'>
         <select className='select_filter' name="prices" id="prices" onChange={() => priceFilter(document.getElementById("prices").options[document.getElementById("prices").selectedIndex].text)}>
           <option value="placeholder" disabled="" selected="">Price</option>
@@ -92,6 +114,8 @@ function Items() {
       <ul className='cards__items'>
         {rendered_items_list}
       </ul>
+      </div>
+}
     </>
   );
 }
