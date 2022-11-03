@@ -1,0 +1,36 @@
+.item-details {
+    margin: 10vh 5vw 32vh 5vw;
+    align-self: center;
+    display: flex;
+    padding: 3vh 4vw;
+    height: 45vh;
+}
+.item-details img{
+    padding-right: 5vw ;
+
+}
+.characteristics{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10vh;
+    width: 35vw;
+}
+.characteristics p {
+    background: #F063B8;
+    border-radius: 50px;
+    padding: 15px;
+
+}
+.title{
+    font-size: 1em;
+    margin: 0;
+    text-transform: uppercase;
+   font-size: 2.5rem;
+   padding-bottom: 10vh;
+}
+.item-details{
+    width: 50%;
+}
+.choice{
+    padding-top: 5vh;
+}
