@@ -16,7 +16,7 @@ header {
     width: 3rem;
 }
 header h1 {
-    color: rgb(0, 0, 0);
+    color: rgb(206, 206, 206);;
 }
 
 header nav {
@@ -30,14 +30,14 @@ header nav  a{
     margin-right: 10%;
 }
 header a {
-    color: rgb(0, 0, 0);
+    color: rgb(206, 206, 206);;
     font-size: x-large;
     font-style: inherit;
     text-decoration: none;
 }
 
 a:link, a:visited {
-    color: rgb(0, 0, 0);
+    color: rgb(206, 206, 206);;
   }
   
   a.current:link, a.current:visited {
