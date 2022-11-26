@@ -12,18 +12,18 @@ function Items() {
   const [clothers, setClothers] = useState([])
 
   useEffect(() => {
-      axios.get('http://localhost:8080/api/clothes/get').then(res => {
+      axios.get('http://localhost:8080/api/сlothes').then(res => {
           setClothers(res.data)
       })
   }, [])
   setTimeout(() => {
     setLoading(false)
-}, 2000)
+}, 200)
 
 
 
 
-  const [filtered, setFiltered] = useState(Clothes)
+  const [filtered, setFiltered] = useState(clothers)
   const [value, setValue] = useState('')
   useEffect(() => {
     setFiltered(clothers)

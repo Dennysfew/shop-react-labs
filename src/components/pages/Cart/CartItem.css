@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40vh;
+  
+}
+.CartImg {
+    width: 10vw;
+   padding-right:30px;
+}
+.changeCount{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20vw;
+
+}
+.button{
+    width: 10%;
+    height: 10%;
+
+}
+.count{
+    padding: 10px 40px 10px 10px ;
+    font-size: 16px;
+}

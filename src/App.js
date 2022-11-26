@@ -2,12 +2,11 @@ import React from 'react';
 import './App.css';
 import Home from './components/pages/Home.js'
 import Catalog from './components/pages/Catalog.js'
-import Cart from './components/pages/Cart.js'
 import Header from './components/Header/Header.js'
 import Footer from './components/Footer/Footer.js'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ItemDetails from './components/pages/ItemDetails';
-
+import Cart from "./components/pages/Cart/Cart.js";
 function App() {
   return (
     <Router>

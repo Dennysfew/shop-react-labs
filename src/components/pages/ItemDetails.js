@@ -3,18 +3,26 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom"
 import './ItemDetails.css'
-
+import Loader from '../Loader/Loader';
+import { useDispatch } from "react-redux"
+import { addToCart } from '../../data/reducer.js';
 function ItemDetails() {
     let {id} = useParams();
     const [loading, setLoading] = useState(true)
     const [clothes, setClothes] = useState({id: 1, name: "none", price: 0, img: "", description: "", sex: "", color:""})
+    
+    const dispatch = useDispatch();
+    let itemToCart = {name: clothes.name, price: clothes.price, count: 1, image: clothes.image};
 
+    // const handleAddToCart = (clothes) => {
+    //     dispatch(addToCart(clothes))
+    // };
     setTimeout(() => {
         setLoading(false)
-    }, 2000)
+    }, 100)
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/clothes/get/${id}`).then(res => setClothes(res.data))
+        axios.get(`http://localhost:8080/api/сlothes/${id}`).then(res => setClothes(res.data))
     }, [id])
 
   return (
@@ -25,7 +33,7 @@ function ItemDetails() {
     <div className="novelty">
       
         <section className='item-details'>
-          <img src={clothes.img} />
+          <img src={clothes.image} />
           <div class="item-details__info">
             <div className='characteristics'>
               <p>{clothes.sex}</p>
@@ -43,7 +51,7 @@ function ItemDetails() {
               <Link to='/catalog'>
                 <button className='go-back-bt'>Go Back</button>
               </Link>
-              <button className='add-bt'>Add to cart</button>
+              <button className='add-bt' onClick={() => { dispatch(addToCart( itemToCart)) }}>Add to cart</button>
             </section>
           </div>
         </section>

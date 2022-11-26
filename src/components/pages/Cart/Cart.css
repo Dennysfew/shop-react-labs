@@ -1,0 +1,26 @@
+main {
+    margin-top: 20vh;
+}
+
+.cartList{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.cart_item{
+    width: 80%;
+}
+.navigationCart {
+    display: flex;
+    align-items: center;
+    padding: 20vw;
+    justify-content: space-between;
+}
+.Total {
+    align-items: center;
+    padding-left: 40vw;
+  
+}
+.cartEmpty {
+    text-align: center;
+}
